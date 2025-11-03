@@ -29,7 +29,7 @@ export default function page() {
     const fetchTasks = async () => {
       setLoading(true);
       try {
-        const res = await fetch("https://backendtask-8djc.onrender.com/tasks", {
+        const res = await fetch("https://backendrepo-9czv.onrender.com/tasks", {
           credentials: "include",
         });
         const tasks = await res.json();

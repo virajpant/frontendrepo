@@ -22,7 +22,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch("https://backendtask-8djc.onrender.com/auth/logout", {
+      const res = await fetch("https://backendrepo-9czv.onrender.com/auth/logout", {
         method: "POST",
         credentials: "include",
       });

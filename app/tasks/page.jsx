@@ -17,7 +17,7 @@ export default function Tasks() {
 
   const fetchTasks = async () => {
     try {
-      const res = await fetch("https://backendtask-8djc.onrender.com/tasks", {
+      const res = await fetch("https://backendrepo-9czv.onrender.com/tasks", {
         method: "GET",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

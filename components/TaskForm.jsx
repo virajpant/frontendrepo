@@ -25,7 +25,7 @@ export default function TaskForm({ onTaskCreated }) {
 
     const fetchCurrentUser = async () => {
       try {
-        const res = await fetch(`https://backendtask-8djc.onrender.com//users/${userId}`, {
+        const res = await fetch(`https://backendrepo-9czv.onrender.com//users/${userId}`, {
           credentials: "include",
         });
         if (!res.ok) throw new Error("User not found");
@@ -43,7 +43,7 @@ export default function TaskForm({ onTaskCreated }) {
 
     const fetchAllUsers = async () => {
       try {
-        const res = await fetch("https://backendtask-8djc.onrender.com//users", {
+        const res = await fetch("https://backendrepo-9czv.onrender.com//users", {
           credentials: "include",
         });
         const data = await res.json();
@@ -70,7 +70,7 @@ export default function TaskForm({ onTaskCreated }) {
             : currentUser?._id, 
       };
 
-      const res = await fetch("https://backendtask-8djc.onrender.com/tasks", {
+      const res = await fetch("https://backendrepo-9czv.onrender.com/tasks", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

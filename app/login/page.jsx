@@ -9,7 +9,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-  const res = await fetch('https://backendtask-8djc.onrender.com/auth/login', {
+  const res = await fetch('https://backendrepo-9czv.onrender.com/auth/login', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ email, password }),

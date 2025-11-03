@@ -17,7 +17,7 @@ export default function TaskList({ tasks, setTasks, refreshTasks }) {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("https://backendtask-8djc.onrender.com/users", { credentials: "include" });
+        const res = await fetch("https://backendrepo-9czv.onrender.com/users", { credentials: "include" });
         const data = await res.json();
         setUsers(Array.isArray(data) ? data : []);
       } catch (err) {
@@ -27,7 +27,7 @@ export default function TaskList({ tasks, setTasks, refreshTasks }) {
 
     const fetchCurrentUser = async () => {
       try {
-        const res = await fetch("https://backendtask-8djc.onrender.com/auth/profile", { credentials: "include" });
+        const res = await fetch("https://backendrepo-9czv.onrender.com/auth/profile", { credentials: "include" });
         if (!res.ok) throw new Error("Failed to fetch current user");
         const data = await res.json();
         setCurrentUser(data);
@@ -74,7 +74,7 @@ export default function TaskList({ tasks, setTasks, refreshTasks }) {
         assignedTo: formData.assignedTo || null,
       };
 
-      const res = await fetch(`https://backendtask-8djc.onrender.com/tasks/${editingTask}`, {
+      const res = await fetch(`https://backendrepo-9czv.onrender.com/tasks/${editingTask}`, {
         method: "PUT",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -96,7 +96,7 @@ export default function TaskList({ tasks, setTasks, refreshTasks }) {
   const handleDelete = async () => {
     if (!deletingTask) return;
     try {
-      const res = await fetch(`https://backendtask-8djc.onrender.com/tasks/${deletingTask}`, {
+      const res = await fetch(`https://backendrepo-9czv.onrender.com/tasks/${deletingTask}`, {
         method: "DELETE",
         credentials: "include",
       });
